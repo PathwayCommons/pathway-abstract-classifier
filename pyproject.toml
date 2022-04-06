@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pathway-abstract-classifier"
+version = "0.1.0"
+description = "Classify articles in terms of being suitable for Biofactoid"
+authors = ["Steven Palayew"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^1.4.2"
+scikit-learn = "^1.0.2"
+ktrain = "^0.30.0"
+
+[tool.poetry.dev-dependencies]
+ktrain = "^0.30.0"
+pandas = "^1.4.2"
+scikit-learn = "^1.0.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
