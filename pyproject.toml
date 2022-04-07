@@ -10,5 +10,5 @@ ktrain = "^0.30.0"
 cached-path = "^1.1.1"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
