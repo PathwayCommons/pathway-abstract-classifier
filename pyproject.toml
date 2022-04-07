@@ -5,7 +5,7 @@ description = "Classify articles in terms of being suitable for Biofactoid"
 authors = ["Steven Palayew"]
 
 [tool.poetry.dependencies]
-python = "^3.7.1"
+python = ">=3.7.1, <3.10"
 ktrain = "^0.30.0"
 cached-path = "^1.1.1"
 
