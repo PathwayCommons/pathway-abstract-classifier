@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pathway-abstract-classifier"
+name = "pathway_abstract_classifier"
 version = "0.1.0"
 description = "Classify articles in terms of being suitable for Biofactoid"
 authors = ["Steven Palayew"]
