@@ -6,14 +6,8 @@ authors = ["Steven Palayew"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-pandas = "^1.4.2"
-scikit-learn = "^1.0.2"
 ktrain = "^0.30.0"
-
-[tool.poetry.dev-dependencies]
-ktrain = "^0.30.0"
-pandas = "^1.4.2"
-scikit-learn = "^1.0.2"
+cached-path = "^1.1.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
