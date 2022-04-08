@@ -1,6 +1,4 @@
-# Import Libraries
 import ktrain
-import sklearn
 from cached_path import cached_path
 
 # Load model
