@@ -79,7 +79,7 @@ target/
 .ipynb_checkpoints
 
 # IDEA files
-/.idea
+.idea/
 
 # IPython
 profile_default/
