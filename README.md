@@ -4,7 +4,7 @@ A tool to classify articles with pathway content in terms of whether they are su
 ## Usage 
 
 ### Installation
-```
+```sh
 git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
 cd pathway-abstract-classifier
 pip install -r requirements.txt
@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ### Quickstart 
 Once you have requirements (there are only 3 - see requirements.txt) installed, you can simply run:
 
-```
+```py
 # Point this to newest release to get newest model
 model_path = cached_path("https://github.com/PathwayCommons/pathway-abstract-classifier/releases/download/pretrained-models/title_abstract_model.zip", extract_archive=True)
 
@@ -24,12 +24,6 @@ model = ktrain.load_predictor(model_path)
 
 # Predict Examples 
 
-# Trivial 
-prediction=model.predict("Article Title".strip() + ' [SEP] ' + "Article Abstract".strip())
-print(prediction)
-
-
-# Realistic
 titles = [
     "YTHDC1-mediated augmentation of miR-30d in repressing pancreatic tumorigenesis via attenuation of RUNX1-induced transcriptional activation of Warburg effect",
     "Loss of 15-lipoxygenase disrupts T reg differentiation altering their pro-resolving functions"
@@ -42,8 +36,8 @@ abstracts = [
 
 texts = [title + " [SEP] " + abstract for title, abstract in zip(titles, abstracts)]
 predictions = model.predict(texts))
+# Verify Articles Classified Correctly 
 assert predictions == [1,0]
-print("Articles correctly classified")
 ```
 
 ## Citing 
