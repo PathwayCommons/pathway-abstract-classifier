@@ -42,6 +42,8 @@ abstracts = [
 
 texts = [title + " [SEP] " + abstract for title, abstract in zip(titles, abstracts)]
 predictions = model.predict(texts))
+assert predictions == [1,0]
+print("Articles correctly classified")
 ```
 
 ## Citing 
