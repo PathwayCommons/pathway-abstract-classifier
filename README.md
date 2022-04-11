@@ -41,7 +41,7 @@ abstracts = [
 ]
 
 texts = [title + " [SEP] " + abstract for title, abstract in zip(titles, abstracts)]
-print(model.predict(texts))
+predictions = model.predict(texts))
 ```
 
 ## Citing 
