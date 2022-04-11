@@ -1,7 +1,16 @@
 # pathway-abstract-classifier
 A tool to classify articles with pathway content in terms of whether they are suitable for [Biofactoid](https://biofactoid.org/). 
 
-## Quickstart 
+## Usage 
+
+### Installation
+```
+git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
+cd pathway-abstract-classifier
+pip install -r requirements.txt
+```
+
+### Quickstart 
 Once you have requirements (there are only 3 - see requirements.txt) installed, you can simply run:
 
 ```
@@ -16,13 +25,6 @@ model = ktrain.load_predictor(model_path)
 # Predict Example 
 prediction=model.predict("Article Title".strip() + ' [SEP] ' + "Article Abstract".strip())
 print(prediction)
-```
-
-## Installation
-```
-git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
-cd pathway-abstract-classifier
-pip install -r requirements.txt
 ```
 
 ## Citing 
