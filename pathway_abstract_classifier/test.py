@@ -2,8 +2,7 @@ import ktrain
 from cached_path import cached_path
 
 
-# Tests to see that dependencies and model were installed and loaded correctly. Also verifies that Quickstart code works.
-if __name__ == "__main__":
+def main():
     # Load model
     model_path = cached_path("https://github.com/PathwayCommons/pathway-abstract-classifier/releases/download/pretrained-models/title_abstract_model.zip", extract_archive=True)
     model = ktrain.load_predictor(model_path)
@@ -28,3 +27,8 @@ if __name__ == "__main__":
 
     # Prints if execution was not stopped by an assert statement
     print("Articles correctly classified")
+
+
+# Tests to see that dependencies and model were installed and loaded correctly. Also verifies that Quickstart code works.
+if __name__ == "__main__":
+    main()
