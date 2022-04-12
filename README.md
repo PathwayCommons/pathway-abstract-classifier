@@ -14,6 +14,9 @@ pip install -r requirements.txt
 Once you have requirements (there are only 3 - see requirements.txt) installed, you can simply run:
 
 ```py
+import ktrain
+from cached_path import cached_path
+
 # Point this to newest release to get newest model
 model_path = cached_path("https://github.com/PathwayCommons/pathway-abstract-classifier/releases/download/pretrained-models/title_abstract_model.zip", extract_archive=True)
 
