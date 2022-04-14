@@ -41,6 +41,7 @@ predictions = model.predict(texts)
 # Verify Articles Classified Correctly 
 assert predictions == [1,0]
 ```
+See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. 
 
 ## Citing 
 [Todo?] 
