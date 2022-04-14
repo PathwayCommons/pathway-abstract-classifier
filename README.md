@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 
 ### Quickstart 
-Basic example; model is loaded and then used to classify one article that clearly belongs in Biofactoid and one that clearly does not. On the last line, we check that it gets this correct. 
+Basic example; model is loaded and then used to classify one article that clearly belongs in Biofactoid and one that clearly does not. On the last line, we check that it gets this correct (where an output of 1 indicates article belongs in Biofactoid, 0 indicates it does not). 
 ```py
 import ktrain
 from cached_path import cached_path
