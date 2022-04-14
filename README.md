@@ -11,8 +11,7 @@ pip install -r requirements.txt
 ```
 
 ### Quickstart 
-Once you have requirements (there are only 3 - see requirements.txt) installed, you can simply run:
-
+Basic example; model is used to classify one article that clearly belongs in Biofactoid and one that clearly does not. On the last line, we check that it gets this correct. 
 ```py
 import ktrain
 from cached_path import cached_path
