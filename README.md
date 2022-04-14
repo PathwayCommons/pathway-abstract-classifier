@@ -45,7 +45,7 @@ predictions = model.predict(texts)
 # Verify Articles Classified Correctly 
 assert predictions == [1,0]
 ```
-See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. Also considering taking a look at the [Ktrain documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
+See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. Also considering taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
 
 ## Citing 
 [Todo?] 
