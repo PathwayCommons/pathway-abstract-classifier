@@ -36,12 +36,16 @@ abstracts = [
     "Regulatory T-cells (Tregs) are central in the maintenance of homeostasis and resolution of inflammation. However, the mechanisms that govern their differentiation and function are not completely understood. Herein, we demonstrate a central role for the lipid mediator biosynthetic enzyme 15-lipoxygenase (ALOX15) in regulating key aspects of Treg biology. Pharmacological inhibition or genetic deletion of ALOX15 in Tregs decreased FOXP3 expression, altered Treg transcriptional profile and shifted their metabolism. This was linked with an impaired ability of Alox15-deficient cells to exert their pro-resolving actions, including a decrease in their ability to upregulate macrophage efferocytosis and a downregulation of interferon gamma expression in Th1 cells. Incubation of Tregs with the ALOX15-derived specilized pro-resolving mediators (SPM)s Resolvin (Rv)D3 and RvD5n-3 DPA rescued FOXP3 expression in cells where ALOX15 activity was inhibited. In vivo, deletion of Alox15 led to increased vascular lipid load and expansion of Th1 cells in mice fed western diet, a phenomenon that was reversed when Alox15-deficient mice were reconstituted with wild type Tregs. Taken together these findings demonstrate a central role of pro-resolving lipid mediators in governing the differentiation of naive T-cells to Tregs."
 ]
 
+# Concatenate titles and abstracts with [SEP] token expected by BERT based models
 texts = [title + " [SEP] " + abstract for title, abstract in zip(titles, abstracts)]
+
+# Make predictions
 predictions = model.predict(texts)
+
 # Verify Articles Classified Correctly 
 assert predictions == [1,0]
 ```
-See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. 
+See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. Also considering taking a look at the [Ktrain documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
 
 ## Citing 
 [Todo?] 
