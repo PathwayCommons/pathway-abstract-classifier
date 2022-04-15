@@ -1,0 +1,3 @@
+This directory contains the most important code involved in the model training process, as a reference. 
+
+[Todo - add descriptions of files]
