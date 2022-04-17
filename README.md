@@ -9,6 +9,7 @@ git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
 cd pathway-abstract-classifier
 pip install -r requirements.txt
 ```
+This repository requires Python 3.7 or later. 
 
 ### Quickstart 
 Basic example; model is loaded and then used to classify one article that clearly belongs in Biofactoid and one that clearly does not. On the last line, we check that it gets this correct (where an output of 1 indicates article belongs in Biofactoid, 0 indicates it does not). 
@@ -45,6 +46,8 @@ predictions = model.predict(texts)
 # Verify Articles Classified Correctly 
 assert predictions == [1,0]
 ```
+ktrain may throw a UserWarning which you can safely ignore. 
+
 See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
 
 ## Citing 
