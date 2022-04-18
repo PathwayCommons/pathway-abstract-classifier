@@ -3,6 +3,7 @@ A tool to classify articles with pathway content in terms of whether they are su
 
 ## Usage 
 
+This repository requires Python 3.7 or later. 
 ### Installation
 ```sh
 git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
@@ -39,13 +40,14 @@ abstracts = [
 # Concatenate titles and abstracts with [SEP] token expected by BERT based models
 texts = [title + " [SEP] " + abstract for title, abstract in zip(titles, abstracts)]
 
-# Make predictions
+# Make predictions. Ktrain may throw a UserWarning which you can safely ignore. 
 predictions = model.predict(texts)
 
 # Verify Articles Classified Correctly 
 assert predictions == [1,0]
 ```
-See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
+
+See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) (also available [here](https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) as a Colab link) for a more detailed guide on potential usage. Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
 
 ## Citing 
 [Todo?] 
