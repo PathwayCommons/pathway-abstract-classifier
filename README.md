@@ -38,7 +38,8 @@ abstracts = [
 ]
 
 # Concatenate titles and abstracts with [SEP] token expected by BERT based models
-texts = [title + " [SEP] " + abstract for title, abstract in zip(titles, abstracts)]
+sep_token = model.preproc.get_tokenizer().sep_token
+texts = [" ".join([title, sep_token, abstract]) for title, abstract in zip(titles, abstracts)]
 
 # Make predictions. Ktrain may throw a UserWarning which you can safely ignore. 
 predictions = model.predict(texts)
