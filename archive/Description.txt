@@ -1,7 +1,7 @@
 This directory contains the most important code involved in the model training process, as a reference. 
 
 cleanlab-trial3 -> Identify data in train set that is mislabelled 
-demo_model_kaggle -> Train/fine tune transformer model (Note - model performance very slightly different than that in other code, despite code used to train the model being the same, because full determinism couldn't be achieved)
+train_model_kaggle -> Train/fine tune transformer model (Note - model performance very slightly different than that in other code, despite code used to train the model being the same, because full determinism couldn't be achieved)
 final-val-test-check -> Check validation, test, and manual test performance of model 
 pr-curve -> Plot precision recall curve using transformer model 
 
