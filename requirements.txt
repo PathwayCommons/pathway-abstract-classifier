@@ -1,3 +1,4 @@
 tensorflow==2.8.0
 ktrain==0.30.0
 cached-path==1.1.1
+streamlit==1.8.1
