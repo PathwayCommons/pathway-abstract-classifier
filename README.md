@@ -48,7 +48,7 @@ predictions = model.predict(texts)
 assert predictions == [1,0]
 ```
 
-See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
+See this [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) for a more detailed guide on potential usage. Importantly, this tutorial shows how to conduct threshold-moving, which you can learn more about [here](https://deepchecks.com/glossary/classification-threshold/). Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
 
 ## Citing 
 [Todo?] 
