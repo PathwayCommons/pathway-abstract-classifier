@@ -1,9 +1,13 @@
+<a href="https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 # pathway-abstract-classifier
+
 A tool to classify articles with pathway content in terms of whether they are suitable for [Biofactoid](https://biofactoid.org/). 
 
 ## Usage 
 
 This repository requires Python 3.7 or later. 
+
 ### Installation
 ```sh
 git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
@@ -12,7 +16,9 @@ pip install -r requirements.txt
 ```
 
 ### Quickstart 
+
 Basic example; model is loaded and then used to classify one article that clearly belongs in Biofactoid and one that clearly does not. On the last line, we check that it gets this correct (where an output of 1 indicates article belongs in Biofactoid, 0 indicates it does not). 
+
 ```py
 import ktrain
 from cached_path import cached_path
