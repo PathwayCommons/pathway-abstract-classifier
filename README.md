@@ -1,6 +1,7 @@
-<a href="https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/pathway_abstract_classifier/tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/pathwaycommons/pathway-abstract-classifier/main/pathway_abstract_classifier/app.py)
 
-# pathway-abstract-classifier
+# Pathway Abstract Classifier
 
 A tool to classify articles with pathway content in terms of whether they are suitable for [Biofactoid](https://biofactoid.org/). 
 
@@ -9,6 +10,7 @@ A tool to classify articles with pathway content in terms of whether they are su
 This repository requires Python 3.7 or later. 
 
 ### Installation
+
 ```sh
 git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
 cd pathway-abstract-classifier
@@ -31,8 +33,7 @@ model_path = cached_path("https://github.com/PathwayCommons/pathway-abstract-cla
 # Load model
 model = ktrain.load_predictor(model_path)
 
-# Predict Examples 
-
+# Example articles
 titles = [
     "YTHDC1-mediated augmentation of miR-30d in repressing pancreatic tumorigenesis via attenuation of RUNX1-induced transcriptional activation of Warburg effect",
     "Loss of 15-lipoxygenase disrupts T reg differentiation altering their pro-resolving functions"
@@ -54,7 +55,7 @@ predictions = model.predict(texts)
 assert predictions == [1,0]
 ```
 
-See the [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/pathway_abstract_classifier/tutorial.ipynb) (or open it in [Colab](https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/pathway_abstract_classifier/tutorial.ipynb)) for a more detailed guide on potential usage. Importantly, this tutorial shows how to conduct threshold-moving, which you can learn more about [here](https://deepchecks.com/glossary/classification-threshold/). Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
+See the [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb) (or open it in [Colab](https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb)) for a more detailed guide on potential usage. Importantly, this tutorial shows how to conduct threshold-moving, which you can learn more about [here](https://deepchecks.com/glossary/classification-threshold/). Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
 
 ## Citing
 
