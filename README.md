@@ -1,4 +1,4 @@
-<a href="https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/pathway_abstract_classifier/tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 # pathway-abstract-classifier
 
@@ -54,8 +54,9 @@ predictions = model.predict(texts)
 assert predictions == [1,0]
 ```
 
-See the [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb) (or open it in [Colab](https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/Tutorial.ipynb)) for a more detailed guide on potential usage. Importantly, this tutorial shows how to conduct threshold-moving, which you can learn more about [here](https://deepchecks.com/glossary/classification-threshold/). Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
+See the [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/pathway_abstract_classifier/tutorial.ipynb) (or open it in [Colab](https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/pathway_abstract_classifier/tutorial.ipynb)) for a more detailed guide on potential usage. Importantly, this tutorial shows how to conduct threshold-moving, which you can learn more about [here](https://deepchecks.com/glossary/classification-threshold/). Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
 
-## Citing 
+## Citing
+
 [Todo?] 
 
