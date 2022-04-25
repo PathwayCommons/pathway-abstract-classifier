@@ -48,7 +48,7 @@ def test_model_load_and_predict():
             " prognosis factors for overall survival in PDAC tissues. Overall, we demonstrated that"
             " miR-30d is a functional and clinical tumor-suppressive gene in PDAC. Our findings further"
             " uncover that miR-30d is a novel target for YTHDC1 through m6A modification, and miR-30d"
-            " represses pancreatic tumorigenesis via suppressing aerobic glycolysis.",
+            " represses pancreatic tumorigenesis via suppressing aerobic glycolysis."
         ),
         (
             "Regulatory T-cells (Tregs) are central in the maintenance of homeostasis and resolution"
