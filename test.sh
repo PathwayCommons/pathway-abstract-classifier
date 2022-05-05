@@ -7,4 +7,4 @@ poetry run flake8 ./pathway_abstract_classifier --count --select=E9,F63,F7,F82 -
 poetry run flake8 ./pathway_abstract_classifier --count --exit-zero --max-complexity=10 --statistics
 
 # echo "Type checking"
-# poetry run mypy . --cache-dir=/dev/null
+poetry run mypy . --cache-dir=/dev/null

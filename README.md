@@ -101,6 +101,31 @@ $ ./test.sh
 Under the hood, the tests are run with [pytest](https://docs.pytest.org/). The test script also does a lint check with [flake8](https://flake8.pycqa.org/).
 
 
+## Publishing a release
+
+A GitHub workflow will automatically version and release this package to [PyPI](https://pypi.org/) following a push directly to `main` or when a pull request is merged into `main`. A push/merge to `main` will automatically bump up the patch version.
+
+We use [Python Semantic Release (PSR)](https://python-semantic-release.readthedocs.io/en/latest/) to manage versioning. By making a commit with a well-defined message structure, PSR will scan commit messages and bump the version accordingly in accordance with [semver](https://python-poetry.org/docs/cli/#version).
+
+For a patch bump:
+
+```bash
+$ git commit -m "fix(ncbiutils): some comment for this patch version"
+```
+
+For a minor bump:
+
+```bash
+$ git commit -m "feat(ncbiutils): some comment for this minor version bump"
+```
+
+For a release:
+
+```bash
+$ git commit -m "feat(mod_plotting): some comment for this release\n\nBREAKING CHANGE: other footer text."
+```
+
+
 ## Resources
 
 See the [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb) (or open it in [Colab](https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb)) for a more detailed guide on potential usage. Importantly, this tutorial shows how to conduct threshold-moving, which you can learn more about [here](https://deepchecks.com/glossary/classification-threshold/). Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials.
