@@ -82,16 +82,7 @@ assert predictions == [1,0]
 
 ## Testing
 
-As this project was built with [poetry](https://python-poetry.org), you'll need to [install poetry](https://python-poetry.org/docs/#installation) to get this project's development dependencies.
-
-Once installed, clone this GitHub remote:
-
-```bash
-$ git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
-$ cd pathway-abstract-classifier
-```
-
-Install the project:
+From within the directory housing the GitHub repository:
 
 ```bash
 $ poetry install
