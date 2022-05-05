@@ -74,12 +74,3 @@ def test_model_load_and_predict():
     texts = [" ".join([title, sep_token, abstract]) for title, abstract in zip(titles, abstracts)]
     predictions = model.predict(texts)
     assert predictions == [1, 0]
-
-    # Prints if execution was not stopped by an assert statement
-    print("Articles correctly classified")
-
-
-# Tests to see that dependencies and model were installed and loaded correctly.
-# Also verifies that Quickstart code works.
-if __name__ == "__main__":
-    test_model_load_and_predict()
