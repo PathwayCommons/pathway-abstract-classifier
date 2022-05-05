@@ -2,6 +2,7 @@
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/pathwaycommons/pathway-abstract-classifier/main/pathway_abstract_classifier/app.py)
 ![build](https://github.com/PathwayCommons/pathway-abstract-classifier/actions/workflows/ci-cd.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PathwayCommons/pathway-abstract-classifier/)
+[![codecov](https://codecov.io/gh/PathwayCommons/pathway-abstract-classifier/branch/main/graph/badge.svg?token=uHxwRs5JzD)](https://codecov.io/gh/PathwayCommons/pathway-abstract-classifier)
 
 # Pathway Abstract Classifier
 
