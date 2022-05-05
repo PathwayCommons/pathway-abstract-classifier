@@ -1,10 +1,16 @@
 <a href="https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/pathwaycommons/pathway-abstract-classifier/main/pathway_abstract_classifier/app.py)
+![build](https://github.com/PathwayCommons/pathway-abstract-classifier/actions/workflows/ci-cd.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PathwayCommons/pathway-abstract-classifier/)
+[![codecov](https://codecov.io/gh/PathwayCommons/pathway-abstract-classifier/branch/main/graph/badge.svg?token=uHxwRs5JzD)](https://codecov.io/gh/PathwayCommons/pathway-abstract-classifier)
 
 # Pathway Abstract Classifier
 
 A tool to classify articles with biological pathway information.
+
+## Requirements
+
+This project requires Python >=3.8.
 
 ## Installation
 
@@ -16,9 +22,7 @@ $ conda activate testenv
 ```
 
 ```sh
-git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
-cd pathway-abstract-classifier
-pip install -r requirements.txt
+pip install pathway-abstract-classifier
 ```
 
 ## Usage

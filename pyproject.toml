@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pathway_abstract_classifier"
+name = "pathway-abstract-classifier"
 version = "0.1.0"
 description = "A tool to classify articles containing biological pathway information"
 authors = ["Biofactoid <support@biofactoid.org>"]
@@ -19,7 +19,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
+python = ">=3.8,<3.10"
 tensorflow = "2.8.0"
 ktrain = "0.30.0"
 cached-path = "^1.1.1"
