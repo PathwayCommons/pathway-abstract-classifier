@@ -1,15 +1,19 @@
 <a href="https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/pathwaycommons/pathway-abstract-classifier/main/pathway_abstract_classifier/app.py)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PathwayCommons/pathway-abstract-classifier/)
 
 # Pathway Abstract Classifier
 
-A tool to classify articles with pathway content in terms of whether they are suitable for [Biofactoid](https://biofactoid.org/). 
+A tool to classify articles with biological pathway information.
 
-## Usage 
+## Installation
 
-This repository requires Python 3.7 or later. 
+Set up a virtual environment. Here, we use [miniconda](https://docs.conda.io/en/latest/miniconda.html) to create an environment named `testenv`:
 
-### Installation
+```bash
+$ conda create --name testenv python=3.8
+$ conda activate testenv
+```
 
 ```sh
 git clone https://github.com/PathwayCommons/pathway-abstract-classifier.git
@@ -17,9 +21,30 @@ cd pathway-abstract-classifier
 pip install -r requirements.txt
 ```
 
-### Quickstart 
+## Usage
 
-Basic example; model is loaded and then used to classify one article that clearly belongs in Biofactoid and one that clearly does not. On the last line, we check that it gets this correct (where an output of 1 indicates article belongs in Biofactoid, 0 indicates it does not). 
+### Demo
+
+Run a simple demo using [streamlit](https://docs.streamlit.io/)
+
+As this project was built with [poetry](https://python-poetry.org), you'll need to [install poetry](https://python-poetry.org/docs/#installation) to get this project's development dependencies.
+
+From within the directory housing the GitHub repository:
+
+```bash
+$ poetry install
+```
+
+Now run the app:
+
+```bash
+$ streamlit run ./pathway_abstract_classifier/app.py
+```
+
+
+### Example
+
+Classify one article with biological pathway information and one that clearly does not.
 
 ```py
 import ktrain
@@ -28,7 +53,7 @@ from cached_path import cached_path
 # Point this to newest release to get newest model
 model_path = cached_path("https://github.com/PathwayCommons/pathway-abstract-classifier/releases/download/pretrained-models/title_abstract_model.zip", extract_archive=True)
 
-# Note that the following follows basic Ktrain (https://github.com/amaiya/ktrain) syntax. 
+# Note that the following follows basic Ktrain (https://github.com/amaiya/ktrain) syntax.
 
 # Load model
 model = ktrain.load_predictor(model_path)
@@ -48,16 +73,32 @@ abstracts = [
 sep_token = model.preproc.get_tokenizer().sep_token
 texts = [" ".join([title, sep_token, abstract]) for title, abstract in zip(titles, abstracts)]
 
-# Make predictions. Ktrain may throw a UserWarning which you can safely ignore. 
+# Make predictions. Ktrain may throw a UserWarning which you can safely ignore.
 predictions = model.predict(texts)
 
-# Verify Articles Classified Correctly 
+# Verify Articles Classified Correctly
 assert predictions == [1,0]
 ```
 
-See the [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb) (or open it in [Colab](https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb)) for a more detailed guide on potential usage. Importantly, this tutorial shows how to conduct threshold-moving, which you can learn more about [here](https://deepchecks.com/glossary/classification-threshold/). Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials. 
+## Testing
 
-## Citing
+From within the directory housing the GitHub repository:
 
-[Todo?] 
+```bash
+$ poetry install
+```
+
+Run the test script:
+
+```bash
+$ ./test.sh
+```
+
+Under the hood, the tests are run with [pytest](https://docs.pytest.org/). The test script also does a lint check with [flake8](https://flake8.pycqa.org/).
+
+
+## Resources
+
+See the [tutorial](https://github.com/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb) (or open it in [Colab](https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb)) for a more detailed guide on potential usage. Importantly, this tutorial shows how to conduct threshold-moving, which you can learn more about [here](https://deepchecks.com/glossary/classification-threshold/). Also consider taking a look at the Ktrain [documentation](https://amaiya.github.io/ktrain/index.html) and [repo](https://github.com/amaiya/ktrain) which contains some very good tutorials.
+
 
