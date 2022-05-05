@@ -1,6 +1,6 @@
 <a href="https://colab.research.google.com/github/PathwayCommons/pathway-abstract-classifier/blob/main/notebooks/tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/pathwaycommons/pathway-abstract-classifier/main/pathway_abstract_classifier/app.py)
-![build](https://github.com/PathwayCommons/pathway-abstract-classifier/actions/workflows/ci.yml/badge.svg)
+![build](https://github.com/PathwayCommons/pathway-abstract-classifier/actions/workflows/ci-cd.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PathwayCommons/pathway-abstract-classifier/)
 
 # Pathway Abstract Classifier
