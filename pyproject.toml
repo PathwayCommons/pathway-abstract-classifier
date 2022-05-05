@@ -1,9 +1,33 @@
-# This configuration is adapted from: https://github.com/allenai/allennlp/blob/main/pyproject.toml
+[tool.poetry]
+name = "pathway_abstract_classifier"
+version = "0.1.0"
+description = "A tool to classify articles containing biological pathway information"
+authors = ["Biofactoid <support@biofactoid.org>"]
+license = "MIT"
+maintainers = ["Biofactoid <support@biofactoid.org>"]
+readme="README.md"
+repository  = "https://github.com/PathwayCommons/pathway-abstract-classifier"
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT No Attribution License (MIT-0)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.11"
+cached-path = "^1.1"
+
+[tool.poetry.dev-dependencies]
+
 [tool.black]
 line-length = 100
-
 include = '\.pyi?$'
-
 exclude = '''
 (
       __pycache__
@@ -18,3 +42,7 @@ exclude = '''
     | \bdoc\b
 )
 '''
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
