@@ -7,6 +7,10 @@
 
 A tool to classify articles with biological pathway information.
 
+## Requirements
+
+This project requires Python >=3.8.
+
 ## Installation
 
 Set up a virtual environment. Here, we use [miniconda](https://docs.conda.io/en/latest/miniconda.html) to create an environment named `testenv`:
