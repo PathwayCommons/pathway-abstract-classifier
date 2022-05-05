@@ -20,8 +20,10 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.7,<3.11"
-cached-path = "^1.1"
+python = ">=3.8,<3.11"
+tensorflow = "2.8.0"
+ktrain = "0.30.0"
+cached-path = "1.1.1"
 
 [tool.poetry.dev-dependencies]
 
