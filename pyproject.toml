@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pathway_abstract_classifier"
+name = "pathway-abstract-classifier"
 version = "0.1.0"
 description = "A tool to classify articles containing biological pathway information"
 authors = ["Biofactoid <support@biofactoid.org>"]
