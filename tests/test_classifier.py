@@ -37,4 +37,4 @@ class TestClassifierInstance:
             assert "pmid" in prediction
             assert prediction["pmid"] in pmids
             assert "probability" in prediction
-            assert "prediction" in prediction
+            assert "class" in prediction

@@ -1,7 +1,5 @@
 from typing import Any, List, Dict
 from pydantic import BaseModel, PrivateAttr, validator
-
-# from typing import Final
 import ktrain
 from cached_path import cached_path
 
@@ -48,24 +46,23 @@ class Classifier(BaseModel):
         return texts
 
     def _to_predictions(
-        self, documents: List[Dict[str, str]], classes: List[int], probabilities: List[float]
+        self, documents: List[Dict[str, str]], probabilities: List[float]
     ) -> List[Dict[str, Any]]:
         """Format the incoming data with the prediction results"""
         results = []
         for index, document in enumerate(documents):
             prediction = {
                 "pmid": document["pmid"],
-                "prediction": classes[index],
-                "probability": probabilities[index],
+                "class": int(probabilities[index] >= self.threshold),
+                "probability": float(probabilities[index]),
             }
             results.append(prediction)
         return results
 
-    def predict(self, documents: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    def predict(self, documents: List[Dict[str, str]]) -> List[Dict[str, Any]]:
         """Predictions based on text in documents"""
         results = []
         texts = self._to_texts(documents)
-        classes = self._model.predict(texts)
         probabilities = self._model.predict_proba(texts)[:,1]
-        results = self._to_predictions(documents, classes, probabilities)
+        results = self._to_predictions(documents, probabilities)
         return results
