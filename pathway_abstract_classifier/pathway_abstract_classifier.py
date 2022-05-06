@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, List, Dict
 from pydantic import BaseModel, PrivateAttr, validator
 
 # from typing import Final
@@ -17,8 +17,8 @@ class Classifier(BaseModel):
 
     Methods
     ----------
-    request(url: str, **opts)
-        Make request with appropriate body form parameters
+    predict(self, documents: List[Dict[str, str]]) -> List[Dict[str,str]]
+        Make predictions based upon the text information in incoming docuemntss
     """
 
     model_url: str = (
@@ -41,3 +41,31 @@ class Classifier(BaseModel):
         model_path = cached_path(self.model_url, extract_archive=True)
         self._model = ktrain.load_predictor(model_path)
         self._sep_token = self._model.preproc.get_tokenizer().sep_token
+
+    def _to_texts(self, documents: List[Dict[str, str]]) -> List[str]:
+        """Map the title and text fields to a single string"""
+        texts = [" ".join([doc["title"], self._sep_token, doc["abstract"]]) for doc in documents]
+        return texts
+
+    def _to_predictions(
+        self, documents: List[Dict[str, str]], classes: List[int], probabilities: List[float]
+    ) -> List[Dict[str, Any]]:
+        """Format the incoming data with the prediction results"""
+        results = []
+        for index, document in enumerate(documents):
+            prediction = {
+                "pmid": document["pmid"],
+                "prediction": classes[index],
+                "probability": probabilities[index],
+            }
+            results.append(prediction)
+        return results
+
+    def predict(self, documents: List[Dict[str, str]]) -> List[Dict[str, str]]:
+        """Predictions based on text in documents"""
+        results = []
+        texts = self._to_texts(documents)
+        classes = self._model.predict(texts)
+        probabilities = self._model.predict_proba(texts)[:,1]
+        results = self._to_predictions(documents, classes, probabilities)
+        return results
