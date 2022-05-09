@@ -1,7 +1,13 @@
-from typing import Any, List, Dict
+from typing import Any, List, Dict, NamedTuple
 from pydantic import BaseModel, PrivateAttr, validator
 import ktrain
 from cached_path import cached_path
+
+
+class Prediction(NamedTuple):
+    document: Dict[str, str]
+    classification: int
+    probability: float
 
 
 class Classifier(BaseModel):
@@ -40,29 +46,40 @@ class Classifier(BaseModel):
         self._model = ktrain.load_predictor(model_path)
         self._sep_token = self._model.preproc.get_tokenizer().sep_token
 
-    def _to_texts(self, documents: List[Dict[str, str]]) -> List[str]:
-        """Map the title and text fields to a single string"""
-        texts = [" ".join([doc["title"], self._sep_token, doc["abstract"]]) for doc in documents]
+    def _to_texts(
+        self, documents: List[Dict[str, str]], fields: List[str] = ["title", "abstract"]
+    ) -> List[str]:
+        """Map the text fields to a single string"""
+        texts = []
+        for document in documents:
+            tokens: List[str] = []
+            for field in fields:
+                if field in document:
+                    value = document[field]
+                    if value is not None and len(value) > 0:
+                        if len(tokens) > 0:
+                            tokens.append(self._sep_token)
+                        tokens.append(value)
+            texts.append(" ".join(tokens))
         return texts
 
     def _to_predictions(
         self, documents: List[Dict[str, str]], probabilities: List[float]
-    ) -> List[Dict[str, Any]]:
+    ) -> List[Prediction]:
         """Format the incoming data with the prediction results"""
         results = []
         for index, document in enumerate(documents):
-            prediction = {
-                "pmid": document["pmid"],
-                "class": int(probabilities[index] >= self.threshold),
-                "probability": float(probabilities[index]),
-            }
-            results.append(prediction)
+            results.append(
+                Prediction(
+                    document,
+                    int(probabilities[index] >= self.threshold),
+                    float(probabilities[index]),
+                )
+            )
         return results
 
-    def predict(self, documents: List[Dict[str, str]]) -> List[Dict[str, Any]]:
+    def predict(self, documents: List[Dict[str, str]]) -> List[Prediction]:
         """Predictions based on text in documents"""
-        results = []
         texts = self._to_texts(documents)
-        probabilities = self._model.predict_proba(texts)[:,1]
-        results = self._to_predictions(documents, probabilities)
-        return results
+        probabilities = self._model.predict_proba(texts)[:, 1]
+        return self._to_predictions(documents, probabilities)
