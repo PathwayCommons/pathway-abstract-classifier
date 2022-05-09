@@ -18,11 +18,13 @@ class Classifier(BaseModel):
     ----------
     model_url : str
         A url to a previously saved Predictor instance model
+    threshold : float
+        Minimum probability for classification to equal 1
 
     Methods
     ----------
-    predict(self, documents: List[Dict[str, str]]) -> List[Dict[str,str]]
-        Make predictions based upon the text information in incoming docuemntss
+    predict(self, documents: List[Dict[str, str]]) -> List[Prediction]
+        Return a Prediction based upon the text information in incoming docuemnts
     """
 
     model_url: str = (
