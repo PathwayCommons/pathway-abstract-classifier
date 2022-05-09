@@ -1,6 +1,6 @@
 #! /bin/bash
 echo "Tests"
-poetry run pytest tests --cov ./pathway_abstract_classifier
+poetry run pytest tests --cov=pathway_abstract_classifier --cov-config=.coveragerc
 
 echo "Linting"
 poetry run flake8 ./pathway_abstract_classifier --count --select=E9,F63,F7,F82 --show-source --statistics

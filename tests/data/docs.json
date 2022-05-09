@@ -1,0 +1,175 @@
+[
+    {
+        "pmid": "33279447",
+        "doi": "10.1016/j.reuma.2020.11.001",
+        "title": "",
+        "abstract": null,
+        "author_list": [
+            {
+                "fore_name": "Jos\u00e9",
+                "last_name": "Vicente Moreno",
+                "initials": "J",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Presidente de Honor de la SER. Electronic address: dr.vicentemoreno@gmail.com."
+                ],
+                "emails": [
+                    "dr.vicentemoreno@gmail.com"
+                ]
+            }
+        ],
+        "journal": {
+            "title": "Reumatologia clinica",
+            "issn": [
+                "2173-5743"
+            ],
+            "volume": null,
+            "issue": null,
+            "pub_year": "2020",
+            "pub_month": "Dec",
+            "pub_day": "02"
+        }
+    },
+    {
+        "pmid": "30158200",
+        "doi": "10.1136/bmj.k3225",
+        "title": "Assessment of the genetic and clinical determinants of fracture risk: genome wide association and mendelian randomisation study.",
+        "abstract": "OBJECTIVES: To identify the genetic determinants of fracture risk and assess the role of 15 clinical risk factors on osteoporotic fracture risk. DESIGN: Meta-analysis of genome wide association studies (GWAS) and a two-sample mendelian randomisation approach. SETTING: 25 cohorts from Europe, United States, east Asia, and Australia with genome wide genotyping and fracture data. PARTICIPANTS: A discovery set of 37 857 fracture cases and 227 116 controls; with replication in up to 147 200 fracture cases and 150 085 controls. Fracture cases were defined as individuals (>18 years old) who had fractures at any skeletal site confirmed by medical, radiological, or questionnaire reports. Instrumental variable analyses were performed to estimate effects of 15 selected clinical risk factors for fracture in a two-sample mendelian randomisation framework, using the largest previously published GWAS meta-analysis of each risk factor. RESULTS: Of 15 fracture associated loci identified, all were also associated with bone mineral density and mapped to genes clustering in pathways known to be critical to bone biology (eg, SOST, WNT16, and ESR1) or novel pathways (FAM210A, GRB10, and ETS2). Mendelian randomisation analyses showed a clear effect of bone mineral density on fracture risk. One standard deviation decrease in genetically determined bone mineral density of the femoral neck was associated with a 55% increase in fracture risk (odds ratio 1.55 (95% confidence interval 1.48 to 1.63; P=1.5\u00d710-68). Hand grip strength was inversely associated with fracture risk, but this result was not significant after multiple testing correction. The remaining clinical risk factors (including vitamin D levels) showed no evidence for an effect on fracture. CONCLUSIONS: This large scale GWAS meta-analysis for fracture identified 15 genetic determinants of fracture, all of which also influenced bone mineral density. Among the clinical risk factors for fracture assessed, only bone mineral density showed a major causal effect on fracture. Genetic predisposition to lower levels of vitamin D and estimated calcium intake from dairy sources were not associated with fracture risk.",
+        "author_list": [
+            {
+                "fore_name": "Katerina",
+                "last_name": "Trajanoska",
+                "initials": "K",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Department of Internal Medicine, Erasmus MC, University Medical Center, Rotterdam, Netherlands.",
+                    "Department of Epidemiology, Erasmus MC, University Medical Center, Rotterdam, Netherlands."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "John A",
+                "last_name": "Morris",
+                "initials": "JA",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Lady Davis Institute, Jewish General Hospital, McGill University, Montr\u00e9al, Qu\u00e9bec, Canada.",
+                    "Department of Human Genetics, McGill University, Montr\u00e9al, Qu\u00e9bec, Canada."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Ling",
+                "last_name": "Oei",
+                "initials": "L",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Department of Internal Medicine, Erasmus MC, University Medical Center, Rotterdam, Netherlands.",
+                    "Department of Epidemiology, Erasmus MC, University Medical Center, Rotterdam, Netherlands."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Hou-Feng",
+                "last_name": "Zheng",
+                "initials": "HF",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "DaP Lab, School of Life Sciences, Westlake University and Westlake Institute for Advanced Study, Hangzhou, Zhejiang, China.",
+                    "Institute of Aging Research and the Affiliated Hospital, School of Medicine, Hangzhou Normal University, Hangzhou, Zhejiang, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "David M",
+                "last_name": "Evans",
+                "initials": "DM",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Medical Research Council Integrative Epidemiology Unit, University of Bristol, Bristol, UK.",
+                    "University of Queensland Diamantina Institute, University of Queensland, Translational Research Institute, Brisbane, Australia."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Douglas P",
+                "last_name": "Kiel",
+                "initials": "DP",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Institute for Aging Research, Hebrew SeniorLife, Harvard Medical School, Boston, MA, USA.",
+                    "Department of Medicine, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Claes",
+                "last_name": "Ohlsson",
+                "initials": "C",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Centre for Bone and Arthritis Research, Department of Internal Medicine, Institute of Medicine, Sahlgrenska, Gothenburg, Sweden."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "J Brent",
+                "last_name": "Richards",
+                "initials": "JB",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Lady Davis Institute, Jewish General Hospital, McGill University, Montr\u00e9al, Qu\u00e9bec, Canada f.rivadeneira@erasmusmc.nl brent.richards@mcgill.ca.",
+                    "Department of Human Genetics, McGill University, Montr\u00e9al, Qu\u00e9bec, Canada."
+                ],
+                "emails": [
+                    "f.rivadeneira@erasmusmc.nl",
+                    "brent.richards@mcgill.ca"
+                ]
+            },
+            {
+                "fore_name": "Fernando",
+                "last_name": "Rivadeneira",
+                "initials": "F",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Department of Internal Medicine, Erasmus MC, University Medical Center, Rotterdam, Netherlands f.rivadeneira@erasmusmc.nl brent.richards@mcgill.ca.",
+                    "Department of Epidemiology, Erasmus MC, University Medical Center, Rotterdam, Netherlands."
+                ],
+                "emails": [
+                    "f.rivadeneira@erasmusmc.nl",
+                    "brent.richards@mcgill.ca"
+                ]
+            },
+            {
+                "fore_name": null,
+                "last_name": null,
+                "initials": null,
+                "collective_name": "GEFOS/GENOMOS consortium and the 23andMe research team",
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            }
+        ],
+        "journal": {
+            "title": "BMJ (Clinical research ed.)",
+            "issn": [
+                "1756-1833"
+            ],
+            "volume": "362",
+            "issue": null,
+            "pub_year": "2018",
+            "pub_month": "08",
+            "pub_day": "29"
+        }
+    }
+]

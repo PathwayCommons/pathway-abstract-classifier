@@ -1,0 +1,4 @@
+ignore:
+  - "tests/**.py"
+  - "**/app.py"
+  - "**/__init__.py"

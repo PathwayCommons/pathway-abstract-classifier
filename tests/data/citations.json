@@ -1,0 +1,399 @@
+[
+    {
+        "pmid": "29875129",
+        "doi": "10.15252/embj.201797072",
+        "title": "Dimer-specific immunoprecipitation of active caspase-2 identifies TRAF proteins as novel activators.",
+        "abstract": "Caspase-2 has been shown to initiate apoptotic cell death in response to specific intracellular stressors such as DNA damage. However, the molecular mechanisms immediately upstream of its activation are still poorly understood. We combined a caspase-2 bimolecular fluorescence complementation (BiFC) system with fluorophore-specific immunoprecipitation to isolate and study the active caspase-2 dimer and its interactome. Using this technique, we found that tumor necrosis factor receptor-associated factor 2 (TRAF2), as well as TRAF1 and 3, directly binds to the active caspase-2 dimer. TRAF2 in particular is necessary for caspase-2 activation in response to apoptotic cell death stimuli. Furthermore, we found that dimerized caspase-2 is ubiquitylated in a TRAF2-dependent manner at K15, K152, and K153, which in turn stabilizes the active caspase-2 dimer complex, promotes its association with an insoluble cellular fraction, and enhances its activity to fully commit the cell to apoptosis. Together, these data indicate that TRAF2 positively regulates caspase-2 activation and consequent cell death by driving its activation through dimer-stabilizing ubiquitylation.",
+        "author_list": [
+            {
+                "fore_name": "Alexander C",
+                "last_name": "Robeson",
+                "initials": "AC",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Department of Pharmacology and Cancer Biology, Duke University Medical Center, Durham, NC, USA."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Kelly R",
+                "last_name": "Lindblom",
+                "initials": "KR",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Department of Pharmacology and Cancer Biology, Duke University Medical Center, Durham, NC, USA."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Jeffrey",
+                "last_name": "Wojton",
+                "initials": "J",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Department of Pharmacology and Cancer Biology, Duke University Medical Center, Durham, NC, USA."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Sally",
+                "last_name": "Kornbluth",
+                "initials": "S",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Department of Pharmacology and Cancer Biology, Duke University Medical Center, Durham, NC, USA sally.kornbluth@duke.edu kenkyo.matsuura@duke.edu."
+                ],
+                "emails": [
+                    "sally.kornbluth@duke.edu",
+                    "kenkyo.matsuura@duke.edu"
+                ]
+            },
+            {
+                "fore_name": "Kenkyo",
+                "last_name": "Matsuura",
+                "initials": "K",
+                "collective_name": null,
+                "orcid": "0000-0003-4612-6031",
+                "affiliations": [
+                    "Department of Pharmacology and Cancer Biology, Duke University Medical Center, Durham, NC, USA sally.kornbluth@duke.edu kenkyo.matsuura@duke.edu."
+                ],
+                "emails": [
+                    "sally.kornbluth@duke.edu",
+                    "kenkyo.matsuura@duke.edu"
+                ]
+            }
+        ],
+        "journal": {
+            "title": "The EMBO journal",
+            "issn": [
+                "1460-2075"
+            ],
+            "volume": "37",
+            "issue": "14",
+            "pub_year": "2018",
+            "pub_month": "07",
+            "pub_day": "13"
+        }
+    },
+    {
+        "pmid": "29858230",
+        "doi": "10.15252/embj.201798699",
+        "title": "Secretory kinase Fam20C tunes endoplasmic reticulum redox state via phosphorylation of Ero1\u03b1.",
+        "abstract": "Family with sequence similarity 20C (Fam20C), the physiological Golgi casein kinase, phosphorylates numerous secreted proteins that are involved in a wide variety of biological processes. However, the role of Fam20C in regulating proteins in the endoplasmic reticulum (ER) lumen is largely unknown. Here, we report that Fam20C interacts with various luminal proteins and that its depletion results in a more reduced ER lumen. We further show that ER oxidoreductin 1\u03b1 (Ero1\u03b1), the pivotal sulfhydryl oxidase that catalyzes disulfide formation in the ER, is phosphorylated by Fam20C in the Golgi apparatus and retrograde-transported to the ER mediated by ERp44. The phosphorylation of Ser145 greatly enhances Ero1\u03b1 oxidase activity and is critical for maintaining ER redox homeostasis and promoting oxidative protein folding. Notably, phosphorylation of Ero1\u03b1 is induced under hypoxia, reductive stress, and secretion-demanding conditions such as mammalian lactation. Collectively, our findings open a door to uncover how oxidative protein folding is regulated by phosphorylation in the secretory pathway.",
+        "author_list": [
+            {
+                "fore_name": "Jianchao",
+                "last_name": "Zhang",
+                "initials": "J",
+                "collective_name": null,
+                "orcid": "0000-0002-3269-4639",
+                "affiliations": [
+                    "National Laboratory of Biomacromolecules, CAS Center for Excellence in Biomacromolecules, Institute of Biophysics, Chinese Academy of Sciences, Beijing, China.",
+                    "College of Life Sciences, University of Chinese Academy of Sciences, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Qinyu",
+                "last_name": "Zhu",
+                "initials": "Q",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "The State Key Laboratory of Protein and Plant Gene Research, School of Life Sciences, Peking University, Beijing, China.",
+                    "Academy for Advanced Interdisciplinary Studies, Peking-Tsinghua Center for Life Sciences, Peking University, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Xi'e",
+                "last_name": "Wang",
+                "initials": "X",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "National Laboratory of Biomacromolecules, CAS Center for Excellence in Biomacromolecules, Institute of Biophysics, Chinese Academy of Sciences, Beijing, China.",
+                    "College of Life Sciences, University of Chinese Academy of Sciences, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Jiaojiao",
+                "last_name": "Yu",
+                "initials": "J",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "National Laboratory of Biomacromolecules, CAS Center for Excellence in Biomacromolecules, Institute of Biophysics, Chinese Academy of Sciences, Beijing, China.",
+                    "College of Life Sciences, University of Chinese Academy of Sciences, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Xinxin",
+                "last_name": "Chen",
+                "initials": "X",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "National Laboratory of Biomacromolecules, CAS Center for Excellence in Biomacromolecules, Institute of Biophysics, Chinese Academy of Sciences, Beijing, China.",
+                    "College of Life Sciences, University of Chinese Academy of Sciences, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Jifeng",
+                "last_name": "Wang",
+                "initials": "J",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Laboratory of Proteomics, Institute of Biophysics, Chinese Academy of Sciences, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Xi",
+                "last_name": "Wang",
+                "initials": "X",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "National Laboratory of Biomacromolecules, CAS Center for Excellence in Biomacromolecules, Institute of Biophysics, Chinese Academy of Sciences, Beijing, China.",
+                    "College of Life Sciences, University of Chinese Academy of Sciences, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Junyu",
+                "last_name": "Xiao",
+                "initials": "J",
+                "collective_name": null,
+                "orcid": "0000-0003-1822-1701",
+                "affiliations": [
+                    "The State Key Laboratory of Protein and Plant Gene Research, School of Life Sciences, Peking University, Beijing, China.",
+                    "Academy for Advanced Interdisciplinary Studies, Peking-Tsinghua Center for Life Sciences, Peking University, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Chih-Chen",
+                "last_name": "Wang",
+                "initials": "CC",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "National Laboratory of Biomacromolecules, CAS Center for Excellence in Biomacromolecules, Institute of Biophysics, Chinese Academy of Sciences, Beijing, China.",
+                    "College of Life Sciences, University of Chinese Academy of Sciences, Beijing, China."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "Lei",
+                "last_name": "Wang",
+                "initials": "L",
+                "collective_name": null,
+                "orcid": "0000-0002-5071-5800",
+                "affiliations": [
+                    "National Laboratory of Biomacromolecules, CAS Center for Excellence in Biomacromolecules, Institute of Biophysics, Chinese Academy of Sciences, Beijing, China wanglei@moon.ibp.ac.cn.",
+                    "College of Life Sciences, University of Chinese Academy of Sciences, Beijing, China."
+                ],
+                "emails": [
+                    "wanglei@moon.ibp.ac.cn"
+                ]
+            }
+        ],
+        "journal": {
+            "title": "The EMBO journal",
+            "issn": [
+                "1460-2075"
+            ],
+            "volume": "37",
+            "issue": "14",
+            "pub_year": "2018",
+            "pub_month": "07",
+            "pub_day": "13"
+        }
+    },
+    {
+        "pmid": "1312844",
+        "doi": "10.1016/0006-291x(92)90569-7",
+        "title": "Interaction of interferon-alpha with interleukin-1 beta or tumor necrosis factor-alpha on hepatitis B virus enhancer activity.",
+        "abstract": "The interaction of IFN-alpha with IL-1 beta or TNF-alpha on hepatitis B surface antigen (HBsAg) expression was analysed in hepatitis B virus (HBV)-DNA integrated PLC/PRF/5 and non-integrated HuH-7 human hepatoma cells. Secretion of HBsAg in PLC/PRF/5 cells was reduced by IFN-alpha, IL-1 beta or TNF-alpha, and synergistically depressed when IFN-alpha was used in combination with IL-1 beta or TNF-alpha. By Northern blot analysis, the levels of HBsAg mRNA were suppressed by IFN-alpha in combination with IL-1 beta or TNF-alpha. In the chloramphenicol acetyltransferase plasmid transfection assay, IFN-alpha in combination with IL-1 beta or TNF-alpha caused a much greater suppression of HBV enhancer activity than IFN-alpha, IL-1 beta or TNF-alpha alone in both hepatoma cells. These findings suggest that the interaction of IFN-alpha with IL-1 beta or TNF-alpha synergistically represses HBV enhancer activity, resulting in depressed expression of HBsAg.",
+        "author_list": [
+            {
+                "fore_name": "K",
+                "last_name": "Hamasaki",
+                "initials": "K",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "First Department of Internal Medicine, Nagasaki University School of Medicine, Japan."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "K",
+                "last_name": "Nakata",
+                "initials": "K",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "K",
+                "last_name": "Nakao",
+                "initials": "K",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "S",
+                "last_name": "Mitsuoka",
+                "initials": "S",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "T",
+                "last_name": "Tsutsumi",
+                "initials": "T",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "Y",
+                "last_name": "Kato",
+                "initials": "Y",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "M",
+                "last_name": "Shima",
+                "initials": "M",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "N",
+                "last_name": "Ishii",
+                "initials": "N",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "T",
+                "last_name": "Tamaoki",
+                "initials": "T",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "S",
+                "last_name": "Nagataki",
+                "initials": "S",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            }
+        ],
+        "journal": {
+            "title": "Biochemical and biophysical research communications",
+            "issn": [
+                "0006-291X"
+            ],
+            "volume": "183",
+            "issue": "2",
+            "pub_year": "1992",
+            "pub_month": "Mar",
+            "pub_day": "16"
+        }
+    },
+    {
+        "pmid": "1319454",
+        "doi": "10.1677/joe.0.1330477",
+        "title": "Release of interleukin-6 by human thyroid epithelial cells immortalized by simian virus 40 DNA transfection.",
+        "abstract": "Interleukin-6 (IL-6) has actions on a variety of endocrine tissues. The cytokine is secreted by cells of the anterior pituitary and endocrine pancreas and has recently been shown to be produced by cultures of thyroid epithelial cells. In this study we have examined some of the factors which regulate IL-6 release from an immortalized human thyroid line (HTori3). IL-6 release over 24 h was stimulated by TSH (5000 microU/ml), by forskolin (0.01 mmol/l), by fetal calf serum (1-20%) and by epidermal growth factor (20 ng/ml). Stimulation was also apparent with gamma-interferon and with tumour necrosis factor at concentrations known to enhance class II major histocompatibility antigen expression by thyroid epithelium. The most potent factor tested was interleukin-1 (IL-1), which controls IL-6 release from other cell types. Threefold stimulation was found with 1 U/ml rising to 350-fold with 1000 U/ml. The effect of IL-1 took 2 h to develop and was blocked by cycloheximide (100 mumol/l). Stimulation was not markedly inhibited by pertussis toxin. Many of the actions of IL-1 are mediated by prostaglandin E2 (PGE2). At concentrations as low as 30 nmol/l, PGE2 stimulated IL-6 release but the maximum stimulation obtained with PGE2 was only threefold. The effect of IL-1 was not inhibited by indomethacin. These data provide further evidence that IL-6 is produced by human thyrocytes. The effect of IL-1 has not been demonstrated previously. Stimulation of IL-6 release by IL-1 did not appear to be mediated by prostaglandin.(ABSTRACT TRUNCATED AT 250 WORDS)",
+        "author_list": [
+            {
+                "fore_name": "R L",
+                "last_name": "Kennedy",
+                "initials": "RL",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": [
+                    "Department of Medicine, University of Sheffield Clinical Sciences Centre, Northern General Hospital, U.K."
+                ],
+                "emails": null
+            },
+            {
+                "fore_name": "T H",
+                "last_name": "Jones",
+                "initials": "TH",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "R",
+                "last_name": "Davies",
+                "initials": "R",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "S K",
+                "last_name": "Justice",
+                "initials": "SK",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            },
+            {
+                "fore_name": "N R",
+                "last_name": "Lemoine",
+                "initials": "NR",
+                "collective_name": null,
+                "orcid": null,
+                "affiliations": null,
+                "emails": null
+            }
+        ],
+        "journal": {
+            "title": "The Journal of endocrinology",
+            "issn": [
+                "0022-0795"
+            ],
+            "volume": "133",
+            "issue": "3",
+            "pub_year": "1992",
+            "pub_month": "Jun",
+            "pub_day": null
+        }
+    }
+]
