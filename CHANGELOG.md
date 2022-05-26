@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.2 (2022-05-26)
+### Fix
+* **pathway_abstract_classifier:** Use mixed precision, if GPU ([`549d5cd`](https://github.com/PathwayCommons/pathway-abstract-classifier/commit/549d5cd467a51556349ea9b4a636f9a0127ede42))
+
 ## v0.2.1 (2022-05-09)
 
 
