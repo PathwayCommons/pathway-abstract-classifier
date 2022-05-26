@@ -3,6 +3,12 @@ from pydantic import BaseModel, PrivateAttr, validator
 import ktrain
 from cached_path import cached_path
 
+from tensorflow.keras import mixed_precision  # erroneous missing import
+import tensorflow as tf
+
+if len(tf.config.list_physical_devices('GPU')) > 0:
+    mixed_precision.set_global_policy('mixed_float16')
+
 
 class Prediction(NamedTuple):
     document: Dict[str, str]
