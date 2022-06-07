@@ -2,6 +2,8 @@ from typing import Any, List, Dict, NamedTuple
 from pydantic import BaseModel, PrivateAttr, validator
 import ktrain
 from cached_path import cached_path
+from bs4 import BeautifulSoup
+import re
 
 from tensorflow.keras import mixed_precision  # erroneous missing import
 import tensorflow as tf
@@ -86,8 +88,56 @@ class Classifier(BaseModel):
             )
         return results
 
+    def explain(self, text):
+        period_regex = re.compile(r'\.')
+        html = self._model.explain(text)
+        soup = BeautifulSoup(html.data)
+        sentence_list = []
+        sentence = []
+        spans = soup.find_all('p')[1].find_all('span')
+        for span in spans:
+            word = span.contents[0]
+            title = span.get('title')
+            weight = float(title) if title is not None else 0.0
+            # has_period = period_regex.search(word) is not None
+            sentence.append({ 'weight': weight, 'word': word })
+        return sentence
+
     def predict(self, documents: List[Dict[str, str]]) -> List[Prediction]:
         """Predictions based on text in documents"""
         texts = self._to_texts(documents)
         probabilities = self._model.predict_proba(texts)[:, 1]
         return self._to_predictions(documents, probabilities)
+
+
+def explain(html):
+    period_regex = re.compile(r'\.\s')
+    soup = BeautifulSoup(html.data)
+    # sentence_list = []
+    tokens = []
+    spans = soup.find_all('p')[1].find_all('span')
+    for span in spans:
+        word = span.contents[0]
+        title = span.get('title')
+        weight = float(title) if title is not None else 0.0
+        # has_period = period_regex.search(word) is not None
+        tokens.append({ 'weight': weight, 'word': word })
+
+    scores = []
+    running_score = []
+    running_text = ''
+    num_words = 0
+    for token in tokens:
+        word = token['word']
+        running_score.append(token['weight'])
+        running_text += word
+        num_words += 1
+        if period_regex.search(word):
+            scores.append({ 'score': sum(running_score)/num_words, 'text': running_text})
+            running_score = []
+            running_text = ''
+            num_words = 0
+
+    return tokens, scores
+
+
