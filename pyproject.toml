@@ -24,6 +24,8 @@ tensorflow = "2.8.0"
 ktrain = "0.30.0"
 cached-path = "^1.1.1"
 pydantic = "^1.9.0"
+eli5 = {url = "https://github.com/amaiya/eli5/archive/refs/heads/tfkeras_0_10_1.zip"}
+Jinja2 = "3.0.2"
 
 [tool.poetry.dev-dependencies]
 streamlit = "^1.9.0"
