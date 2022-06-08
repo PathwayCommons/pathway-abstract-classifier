@@ -89,19 +89,33 @@ class Classifier(BaseModel):
         return results
 
     def explain(self, text):
-        period_regex = re.compile(r'\.')
+        period_regex = re.compile(r'\.\s')
         html = self._model.explain(text)
         soup = BeautifulSoup(html.data)
-        sentence_list = []
-        sentence = []
+        tokens = []
         spans = soup.find_all('p')[1].find_all('span')
         for span in spans:
             word = span.contents[0]
             title = span.get('title')
             weight = float(title) if title is not None else 0.0
-            # has_period = period_regex.search(word) is not None
-            sentence.append({ 'weight': weight, 'word': word })
-        return sentence
+            tokens.append({ 'weight': weight, 'word': word })
+
+        scores = []
+        running_score = []
+        running_text = ''
+        num_words = 0
+        for token in tokens:
+            word = token['word']
+            running_score.append(token['weight'])
+            running_text += word
+            num_words += 1
+            if period_regex.search(word):
+                scores.append({ 'score': sum(running_score), 'text': running_text})
+                running_score = []
+                running_text = ''
+                num_words = 0
+
+        return tokens, scores, html
 
     def predict(self, documents: List[Dict[str, str]]) -> List[Prediction]:
         """Predictions based on text in documents"""
@@ -110,34 +124,6 @@ class Classifier(BaseModel):
         return self._to_predictions(documents, probabilities)
 
 
-def explain(html):
-    period_regex = re.compile(r'\.\s')
-    soup = BeautifulSoup(html.data)
-    # sentence_list = []
-    tokens = []
-    spans = soup.find_all('p')[1].find_all('span')
-    for span in spans:
-        word = span.contents[0]
-        title = span.get('title')
-        weight = float(title) if title is not None else 0.0
-        # has_period = period_regex.search(word) is not None
-        tokens.append({ 'weight': weight, 'word': word })
 
-    scores = []
-    running_score = []
-    running_text = ''
-    num_words = 0
-    for token in tokens:
-        word = token['word']
-        running_score.append(token['weight'])
-        running_text += word
-        num_words += 1
-        if period_regex.search(word):
-            scores.append({ 'score': sum(running_score)/num_words, 'text': running_text})
-            running_score = []
-            running_text = ''
-            num_words = 0
-
-    return tokens, scores
 
 
