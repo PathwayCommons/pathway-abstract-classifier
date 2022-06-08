@@ -4,6 +4,7 @@ import ktrain
 from cached_path import cached_path
 from bs4 import BeautifulSoup
 import re
+import time
 
 from tensorflow.keras import mixed_precision  # erroneous missing import
 import tensorflow as tf
@@ -90,8 +91,11 @@ class Classifier(BaseModel):
 
     def explain(self, text):
         period_regex = re.compile(r'\.\s')
+        start = time.time()
         html = self._model.explain(text)
-        soup = BeautifulSoup(html.data)
+        end = time.time()
+        duration = end - start
+        soup = BeautifulSoup(html.data, 'html.parser')
         tokens = []
         spans = soup.find_all('p')[1].find_all('span')
         for span in spans:
@@ -115,7 +119,7 @@ class Classifier(BaseModel):
                 running_text = ''
                 num_words = 0
 
-        return tokens, scores, html
+        return tokens, scores, duration
 
     def predict(self, documents: List[Dict[str, str]]) -> List[Prediction]:
         """Predictions based on text in documents"""
