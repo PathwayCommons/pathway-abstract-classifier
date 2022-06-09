@@ -1,10 +1,9 @@
-from typing import Any, List, Dict, NamedTuple
+from typing import Any, List, Dict, NamedTuple, Union
 from pydantic import BaseModel, PrivateAttr, validator
 import ktrain
 from cached_path import cached_path
 from bs4 import BeautifulSoup
 import re
-import time
 
 from tensorflow.keras import mixed_precision  # erroneous missing import
 import tensorflow as tf
@@ -17,6 +16,12 @@ class Prediction(NamedTuple):
     document: Dict[str, str]
     classification: int
     probability: float
+
+
+class Explanation(NamedTuple):
+    document: Dict[str, str]
+    tokens: List[Dict[str, Union[str, float]]]
+    sentences: List[Dict[str, Union[str, float]]]
 
 
 class Classifier(BaseModel):
@@ -89,37 +94,47 @@ class Classifier(BaseModel):
             )
         return results
 
-    def explain(self, text):
+
+    def _explain(self, text: str, **opts: Any) -> Any:
+        explan = self._model.explain(text, **opts)
+        html = BeautifulSoup(explan.data, 'html.parser')
+        return html
+
+
+    def _to_explanation(self, document: Dict[str, str], html: Any) -> Explanation:
         period_regex = re.compile(r'\.\s')
-        start = time.time()
-        html = self._model.explain(text)
-        end = time.time()
-        duration = end - start
-        soup = BeautifulSoup(html.data, 'html.parser')
         tokens = []
-        spans = soup.find_all('p')[1].find_all('span')
+        sentences = []
+        spans = html.find_all('p')[1].find_all('span')
         for span in spans:
             word = span.contents[0]
             title = span.get('title')
             weight = float(title) if title is not None else 0.0
             tokens.append({ 'weight': weight, 'word': word })
 
-        scores = []
         running_score = []
         running_text = ''
-        num_words = 0
         for token in tokens:
             word = token['word']
             running_score.append(token['weight'])
             running_text += word
-            num_words += 1
             if period_regex.search(word):
-                scores.append({ 'score': sum(running_score), 'text': running_text})
+                sentences.append({ 'score': sum(running_score), 'text': running_text})
                 running_score = []
                 running_text = ''
-                num_words = 0
+        return Explanation(document, tokens, sentences)
 
-        return tokens, scores, duration
+
+    def explain(self, documents: List[Dict[str, str]], **opts: Any) -> List[Explanation]:
+        """Estimate weights assigned to each token by the model"""
+        explanations: List[Explanation] = []
+        texts = self._to_texts(documents, fields = ['abstract'])
+
+        for ind, text in enumerate(texts):
+            html = self._explain(text, **opts)
+            expl = self._to_explanation(documents[ind], html)
+            explanations.append(expl)
+        return explanations
 
     def predict(self, documents: List[Dict[str, str]]) -> List[Prediction]:
         """Predictions based on text in documents"""
