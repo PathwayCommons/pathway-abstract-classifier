@@ -8,8 +8,8 @@ import re
 from tensorflow.keras import mixed_precision  # erroneous missing import
 import tensorflow as tf
 
-if len(tf.config.list_physical_devices('GPU')) > 0:
-    mixed_precision.set_global_policy('mixed_float16')
+if len(tf.config.list_physical_devices("GPU")) > 0:
+    mixed_precision.set_global_policy("mixed_float16")
 
 
 class Prediction(NamedTuple):
@@ -37,6 +37,8 @@ class Classifier(BaseModel):
 
     Methods
     ----------
+    explain(self, documents: List[Dict[str, str]]) -> List[Explanation]
+        Return an Explanation based upon the text information in incoming docuemnts
     predict(self, documents: List[Dict[str, str]]) -> List[Prediction]
         Return a Prediction based upon the text information in incoming docuemnts
     """
@@ -94,41 +96,38 @@ class Classifier(BaseModel):
             )
         return results
 
-
     def _explain(self, text: str, **opts: Any) -> Any:
         explan = self._model.explain(text, **opts)
-        html = BeautifulSoup(explan.data, 'html.parser')
+        html = BeautifulSoup(explan.data, "html.parser")
         return html
 
-
     def _to_explanation(self, document: Dict[str, str], html: Any) -> Explanation:
-        period_regex = re.compile(r'\.\s')
+        period_regex = re.compile(r"\.\s")
         tokens = []
         sentences = []
-        spans = html.find_all('p')[1].find_all('span')
+        spans = html.find_all("p")[1].find_all("span")
         for span in spans:
             word = span.contents[0]
-            title = span.get('title')
+            title = span.get("title")
             weight = float(title) if title is not None else 0.0
-            tokens.append({ 'weight': weight, 'word': word })
+            tokens.append({"weight": weight, "word": word})
 
         running_score = []
-        running_text = ''
+        running_text = ""
         for token in tokens:
-            word = token['word']
-            running_score.append(token['weight'])
+            word = token["word"]
+            running_score.append(token["weight"])
             running_text += word
             if period_regex.search(word):
-                sentences.append({ 'score': sum(running_score), 'text': running_text})
+                sentences.append({"score": sum(running_score), "text": running_text})
                 running_score = []
-                running_text = ''
+                running_text = ""
         return Explanation(document, tokens, sentences)
-
 
     def explain(self, documents: List[Dict[str, str]], **opts: Any) -> List[Explanation]:
         """Estimate weights assigned to each token by the model"""
         explanations: List[Explanation] = []
-        texts = self._to_texts(documents, fields = ['abstract'])
+        texts = self._to_texts(documents, fields=["abstract"])
 
         for ind, text in enumerate(texts):
             html = self._explain(text, **opts)
@@ -141,8 +140,3 @@ class Classifier(BaseModel):
         texts = self._to_texts(documents)
         probabilities = self._model.predict_proba(texts)[:, 1]
         return self._to_predictions(documents, probabilities)
-
-
-
-
-
