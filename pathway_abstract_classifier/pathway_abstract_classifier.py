@@ -102,7 +102,7 @@ class Classifier(BaseModel):
         return html
 
     def _to_explanation(self, document: Dict[str, str], html: Any) -> Explanation:
-        period_regex = re.compile(r"\.\s")
+        period_regex = re.compile(r"\.\s?")
         tokens = []
         sentences = []
         spans = html.find_all("p")[1].find_all("span")
@@ -118,7 +118,7 @@ class Classifier(BaseModel):
             word = token["word"]
             running_score.append(token["weight"])
             running_text += word
-            if period_regex.search(word):
+            if period_regex.search(word) or 'sep' in word:
                 sentences.append({"score": sum(running_score), "text": running_text})
                 running_score = []
                 running_text = ""
