@@ -127,7 +127,7 @@ class Classifier(BaseModel):
     def explain(self, documents: List[Dict[str, str]], **opts: Any) -> List[Explanation]:
         """Estimate weights assigned to each token by the model"""
         explanations: List[Explanation] = []
-        texts = self._to_texts(documents, fields=["abstract"])
+        texts = self._to_texts(documents)
 
         for ind, text in enumerate(texts):
             html = self._explain(text, **opts)
