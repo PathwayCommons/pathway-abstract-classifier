@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: pathway-abstract-classifier
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Steven
+    family-names: Palayew
+    affiliation: University of Toronto
+  - given-names: Jeffery
+    family-names: Wong
+    affiliation: University of Toronto
+  - given-names: John
+    family-names: Giorgi
+    affiliation: University of Toronto
+  - given-names: Max
+    family-names: Franz
+    affiliation: University of Toronto
+  - given-names: Gary
+    family-names: Bader
+    affiliation: University of Toronto
+repository-code: >-
+  https://github.com/PathwayCommons/pathway-abstract-classifier
+abstract: >-
+  A tool to classify articles with biological pathway
+  information.
+license: MIT
